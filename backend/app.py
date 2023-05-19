@@ -31,7 +31,5 @@ def hello():
 
 @app.route('/paintings')
 def get_paintings():
-    with open('./data.json') as file:
-        data = json.load(file)
-    return jsonify(data)
+    return 'This should show data'
 
