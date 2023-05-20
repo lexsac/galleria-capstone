@@ -20,6 +20,7 @@
     --fs-400: 0.875rem; /* 14px */
     --fs-300: 0.8125rem; /* 13px */
     --fs-200: 0.75rem; /* 12px */
+    --fs-150: 0.6875rem; /* 11px */
     --fs-100: 0.5625rem; /* 9px */
 
     /* font-families */
@@ -44,6 +45,11 @@
     --lh-400: 1.0625rem; /* 17px */
     --lh-300: 0.9375rem; /* 15px */
     --lh-200: 0.6875rem; /* 11px */
+
+    /* general spacing */
+    --gs-300: 2rem; /* 32px */
+    --gs-200: 1.5rem; /* 24px */
+    --gs-100: 1rem; /* 16px */
 }
 
 /* ------------------------- */
@@ -180,23 +186,25 @@ more descriptive text  */
 }
  
 .subhead-2 {
-    font-size: var(--fs-400);
+    font-size: var(--fs-300);
     line-height: var(--lh-400);
     color: var(--clr-black);
 }
 
 .link-1 {
-    font-size: var(--fs-300);
+    font-size: var(--fs-200);
     line-height: var(--lh-300);
     color: var(--clr-dark-grey);
     letter-spacing: var(--ls-sm);
+    text-transform: uppercase;
 }
 
 .link-2 {
-    font-size: var(--fs-200);
+    font-size: var(--fs-100);
     line-height: var(--lh-200);
     color: var(--clr-dark-grey);
     letter-spacing: var(--ls-xs);
+    text-transform: uppercase;
 }
 
 .body {
