@@ -2,8 +2,13 @@ from flask import Flask, jsonify
 import os
 from flask_sqlalchemy import SQLAlchemy
 from models import Artist, Painting, db, connect_db
+from flask_cors import CORS
 
 app = Flask(__name__)
+
+# Enable CORS for all routes
+CORS(app)
+
 
 # Get DB_URI from environ variable (useful for production/testing) or,
 # if not set there, use development local db.
@@ -31,5 +36,7 @@ def hello():
 
 @app.route('/paintings')
 def get_paintings():
-    return 'This should show data'
+    paintings = Painting.query.all()
+    # Convert paintings to JSON and return the response
+    return jsonify([p.to_dict() for p in paintings])
 
