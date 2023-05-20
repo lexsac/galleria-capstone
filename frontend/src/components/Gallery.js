@@ -7,7 +7,7 @@ const Gallery = () => {
   
     useEffect(() => {
       axios
-        .get('http://localhost:5000/paintings') // Update the URL if necessary
+        .get('http://localhost:5000/paintings') 
         .then((response) => {
           setPaintings(response.data);
         })
