@@ -30,13 +30,22 @@ connect_db(app)
 
 
 @app.route('/')
-def hello():
-    return 'Hello, world!'
-
-
-@app.route('/paintings')
 def get_paintings():
     paintings = Painting.query.all()
     # Convert paintings to JSON and return the response
     return jsonify([p.to_dict() for p in paintings])
+
+
+@app.route('/<int:painting_id>')
+def get_painting(painting_id):
+    # Retrieve the painting with the given ID from the database
+    painting = Painting.query.get(painting_id)
+    if not painting:
+        return jsonify({'message': 'Painting not found'}), 404
+
+    # Convert the painting object to a dictionary representation
+    painting_data = painting.to_dict()
+
+    # Return the painting data as JSON
+    return jsonify(painting_data)
 
