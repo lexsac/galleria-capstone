@@ -21,6 +21,28 @@ class Painting(db.Model):
 
     artist = db.relationship("Artist", backref="paintings")
 
+    def to_dict(self):
+
+        return {
+            'id': self.id,
+            'name': self.name,
+            'year': self.year,
+            'description': self.description,
+            'source': self.source,
+            'artist': {
+                'name': self.artist.artist_name,
+                'image': self.artist.artist_image
+            },
+            'images': {
+                'thumbnail': self.thumbnail_image,
+                'hero': {
+                    'small': self.hero_small_image,
+                    'large': self.hero_large_image
+                },
+                'gallery': self.gallery_image
+            }
+        }
+
 
 class Artist(db.Model):
     """Artists."""
