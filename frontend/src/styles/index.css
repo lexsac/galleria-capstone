@@ -1,0 +1,215 @@
+/* ------------------------- */
+/* Custom properties */
+/* ------------------------- */
+
+:root {
+    /* colors */
+    --clr-black: #000000;
+    --clr-dark-grey: #7D7D7D;
+    --clr-grey: #E5E5E5;
+    --clr-light-grey: #F3F3F3;
+    --clr-white: #FFFFFF;
+
+    /* font sizes */
+    --fs-900: 12.5rem; /* 200px */
+    --fs-850: 6.25rem; /* 100px */
+    --fs-800: 3.5rem; /* 56px */
+    --fs-700: 1.5rem; /* 24px */
+    --fs-600: 1.125rem; /* 18px */
+    --fs-500: 0.9375rem; /* 15px */
+    --fs-400: 0.875rem; /* 14px */
+    --fs-300: 0.8125rem; /* 13px */
+    --fs-200: 0.75rem; /* 12px */
+    --fs-100: 0.5625rem; /* 9px */
+
+    /* font-families */
+    --ff-regular: 'Libre Baskerville', serif;
+
+    /* font weights */
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    /* letter spacing */
+    --ls-xs: 2px;
+    --ls-sm: 2.5px;
+
+    /* line height */
+    --lh-900: 9.375rem; /* 150px */
+    --lh-850: 6.25rem; /* 100px */
+    --lh-800: 4rem; /* 64px */
+    --lh-700: 1.8125rem; /* 29px */
+    --lh-750: 1.75rem; /* 28px */
+    --lh-600: 1.375rem; /* 22px */
+    --lh-500: 1.1875rem; /* 19px */
+    --lh-400: 1.0625rem; /* 17px */
+    --lh-300: 0.9375rem; /* 15px */
+    --lh-200: 0.6875rem; /* 11px */
+}
+
+/* ------------------------- */
+/* CSS reset */
+/* Credit: https://www.joshwcomeau.com/css/custom-css-reset/ */
+/* ------------------------- */
+
+/* Use a more-intuitive box-sizing model */
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+/* Set default font size to user's preferences to allow for proper rem/em sizing */
+:root {
+    font-size: 100%;
+}
+
+/* Remove default margin*/
+* {
+    margin: 0;
+}
+
+/* Allow percentage-based heights in the application */
+html, body {
+    height: 100%;
+}
+
+/* Typographic tweaks! Add accessible line-height, improve text rendering */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+/* Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Remove default styling on a */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove built-in form typography styles */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Avoid text overflows and set default font-weight */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    line-height: var(--lh-sm);    
+}
+
+/* Removes left padding on unordered lists */
+ul {
+    padding-left: 0;
+}
+
+/* Removes list style from li elements */
+li {
+    list-style: none;
+}
+
+/* Smaller line height for larger font sizes */
+h1, h2, h3 {
+    line-height: 1.1;
+}
+
+/* Remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ------------------------- */
+/* Utility classes */
+/* ------------------------- */
+
+/* screen reader only, visually hides content for sighted users, but keep
+that content in the page so that users with assisted technologies can see
+more descriptive text  */ 
+.sr-only { 
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+}
+
+.display {
+    font-size: var(--fs-900);
+    line-height: var(--lh-900);
+    color: var(--clr-light-grey);
+}
+
+.heading-1 {
+    font-size: var(--fs-800);
+    line-height: var(--lh-800);
+    color: var(--clr-black);
+}
+
+.heading-2 {
+    font-size: var(--fs-700);
+    line-height: var(--lh-700);
+    color: var(--clr-black);
+}
+
+.heading-3 {
+    font-size: var(--fs-600);
+    line-height: var(--lh-600);
+    color: var(--clr-black);
+}
+
+.subhead-1 {
+    font-size: var(--fs-500);
+    line-height: var(--lh-500);
+    color: var(--clr-black);
+}
+ 
+.subhead-2 {
+    font-size: var(--fs-400);
+    line-height: var(--lh-400);
+    color: var(--clr-black);
+}
+
+.link-1 {
+    font-size: var(--fs-300);
+    line-height: var(--lh-300);
+    color: var(--clr-dark-grey);
+    letter-spacing: var(--ls-sm);
+}
+
+.link-2 {
+    font-size: var(--fs-200);
+    line-height: var(--lh-200);
+    color: var(--clr-dark-grey);
+    letter-spacing: var(--ls-xs);
+}
+
+.body {
+    font-size: var(--fs-750);
+    color: var(--clr-dark-grey);
+    line-height: var(--lh-750);
+}
+
+
+/* ------------------------- */
+/* General styling */
+/* ------------------------- */
+
+body {
+    font-family: var(--ff-regular);
+}
