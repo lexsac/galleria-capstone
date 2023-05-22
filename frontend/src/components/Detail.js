@@ -7,7 +7,7 @@ const Detail = () => {
   const [painting, setPainting] = useState(null);
 
   useEffect(() => {
-    axios.get(`${paintingId}`)
+    axios.get(`http://localhost:5000/${paintingId}`)
       .then((response) => {
         setPainting(response.data);
       })
@@ -24,6 +24,8 @@ const Detail = () => {
     <div>
       <h2>{painting.name}</h2>
       <p>{painting.description}</p>
+      <img src={painting.images.gallery} alt={painting.title} />
+
       {/* Display additional painting details */}
     </div>
   );
