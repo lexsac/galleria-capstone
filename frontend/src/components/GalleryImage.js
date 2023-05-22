@@ -5,13 +5,12 @@ import { Link } from 'react-router-dom';
 const GalleryImage = ({ painting }) => {
   return (
     <div>
-      <Link to={`/paintings/${painting.id}`}>
-        <img
-          src={process.env.PUBLIC_URL + painting.images.gallery}
-          alt="Gallery"
-        />
-        <h2>{painting.name}</h2>
-        <p>{painting.artist.name}</p>
+      <Link to={`/${painting.id}`} key={painting.id}>
+        <img src={painting.images.gallery} alt={painting.title} />
+        <div className="painting-details">
+          <p>{painting.name}</p>
+          <p>{painting.artist.name}</p>
+        </div>
       </Link>
     </div>
   );
