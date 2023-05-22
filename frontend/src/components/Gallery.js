@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; 
+import { Link } from 'react-router-dom';
 import GalleryImage from './GalleryImage';
 
 const Gallery = () => {
@@ -19,7 +20,7 @@ const Gallery = () => {
     return (
       <div>
         {paintings.map((painting) => (
-          <GalleryImage key={painting.id} painting={painting} />
+          <GalleryImage painting={painting} key={painting.id} />
         ))}
       </div>
     );
