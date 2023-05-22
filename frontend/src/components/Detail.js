@@ -22,11 +22,15 @@ const Detail = () => {
 
   return (
     <div>
-      <h2>{painting.name}</h2>
-      <p>{painting.description}</p>
       <img src={painting.images.gallery} alt={painting.title} />
+      <h2>{painting.name}</h2>
+      <h2>{painting.artist.name}</h2>
 
-      {/* Display additional painting details */}
+      <img src={painting.artist.image} alt={painting.title} />  
+      <p>{painting.year}</p>
+      <p>{painting.description}</p>
+
+      <a href={painting.source}>Go to source</a>
     </div>
   );
 };
