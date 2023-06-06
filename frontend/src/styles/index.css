@@ -170,7 +170,6 @@ more descriptive text  */
 .heading-2 {
     font-size: var(--fs-700);
     line-height: var(--lh-700);
-    color: var(--clr-black);
 }
 
 .heading-3 {

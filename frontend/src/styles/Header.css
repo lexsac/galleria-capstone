@@ -5,8 +5,10 @@
     align-items: center;
     justify-content: space-between;
     padding: var(--gs-200);
+    border-bottom: 1px solid var(--clr-grey);
 }
 
-.header__logo {
-    width: 113px;
+.header__button {
+    border: none;
+    background-color: white;
 }
