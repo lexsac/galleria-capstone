@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; 
-import { Link } from 'react-router-dom';
 import GalleryImage from './GalleryImage';
+import '../styles/Gallery.css';
+
 
 const Gallery = () => {
     const [paintings, setPaintings] = useState([]);
@@ -18,7 +19,7 @@ const Gallery = () => {
     }, []);
   
     return (
-      <div>
+      <div className="gallery">
         {paintings.map((painting) => (
           <GalleryImage painting={painting} key={painting.id} />
         ))}
