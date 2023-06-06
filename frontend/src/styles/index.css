@@ -156,7 +156,7 @@ more descriptive text  */
 }
 
 .display {
-    font-size: var(--fs-900);
+    font-size: var(--fs-850);
     line-height: var(--lh-900);
     color: var(--clr-light-grey);
 }
@@ -210,6 +210,13 @@ more descriptive text  */
     font-size: var(--fs-750);
     color: var(--clr-dark-grey);
     line-height: var(--lh-750);
+}
+
+/* 560px */
+@media (min-width: 35em) {
+    .display {
+        font-size: var(--fs-900);
+    }
 }
 
 
