@@ -1,0 +1,55 @@
+@import './index.css';
+
+.galleryItem {
+    position: relative;
+    margin: var(--gs-200);
+}
+
+.galleryItem__details {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 2;
+    color: var(--clr-white);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.841672) 100%);
+    padding-bottom: 2rem;
+    width: 100%;
+}
+
+.galleryItem__name, .galleryItem__artist {
+    color: var(--clr-white);
+}
+
+.galleryItem__name {
+    padding-bottom: 6px;
+}
+
+.galleryItem__artist {
+    opacity: 0.75;
+}
+
+/* 560px */
+@media (min-width: 35em) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .galleryItem {
+        display: flex;
+        flex-direction: column;
+      }
+      
+    .galleryItem__image {
+        width: 100%;
+        height: auto;
+      }
+
+}
+
+/* 960px */
+@media (min-width: 60em) {
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
