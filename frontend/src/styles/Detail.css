@@ -1,0 +1,24 @@
+@import './index.css';
+
+.paintingDetail__intro {
+    position: relative;
+    margin: var(--gs-200);
+}
+
+.paintingDetail__details {
+    position: absolute;
+    bottom: -10%;
+    z-index: 2;
+    color: var(--clr-white);
+    background: var(--clr-white);
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.paintingDetail__name {
+    color: var(--clr-black);
+}
+
+.paintingDetail__artist {
+    color: var(--clr-dark-grey);
+}
